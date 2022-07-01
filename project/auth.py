@@ -3,6 +3,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, login_required, logout_user
 from .models import User
 from . import db
+from . import functions as f
 
 auth = Blueprint('auth', __name__)
 
@@ -37,7 +38,7 @@ def signup():
 def signup_post():
     # code to validate and add user to database goes here
     email = request.form.get('email')
-    name = request.form.get('name')
+    name = f.format_name(request.form.get('name'))
     password = request.form.get('password')
 
     user = User.query.filter_by(email=email).first() # if this returns a user, then the email already exists in database
