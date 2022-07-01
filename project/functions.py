@@ -1,7 +1,5 @@
 import random
 
 def format_name(name):
-    return name & " du " & random.randint(0,100)
+    return name + " du 62"
 
-name ="Théophile"
-print(format_name(name))

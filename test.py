@@ -7,4 +7,4 @@ random.seed(1)
 def test_function():
     name = "Théophile"
     integ = random.randint(0,100)
-    assert format_name(name) == name + " du " + integ
+    assert format_name(name) == name + " du 62"
