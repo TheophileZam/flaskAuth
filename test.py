@@ -9,7 +9,7 @@ def test_function():
     name = "Théophile"
     integ = random.randint(0,100)
     assert functions.format_name(name) == name + " du 62"
-
+1
 
 class TestUserTakesTheTest(LiveServerTestCase):
     def test_user_login(self):
